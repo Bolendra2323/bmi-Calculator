@@ -1,0 +1,125 @@
+
+https://beta.reactjs.org/
+
+what is react?
+
+1> React is a javascript library
+
+2> The main focus is building UI as fast as possible
+
+3> So this is Used to Single Page Application.
+
+4> Means Complete Website in Single Page
+
+
+REACT is fast because of the following reasons
+
+1> REACT uses Virtual DOM,Virtual DOM update only Required List ,REACT DOM update complete List
+
+**************************************************************************************************************************************************************************************
+
+//1>> Virtual Dom
+https://www.freecodecamp.org/news/a-quick-guide-to-learn-react-and-how-its-virtual-dom-works-c869d788cd44/
+***********************************************************************************************************************************
+
+//files -->
+
+1> package.json --> It is one of the most important file . This file consist of version , commands , packages installed 
+
+2> package-lock.json --> This file consist of the details of package.json
+
+Difference betwen package.json and package-lock.json is that 
+Package-lock.json stores the entire history of package . It also stores the dependencies of every package
+
+Package.json stores the details of application while package-lock.json stores the key details of node modules and also the details of package.json
+
+.git-ignore--> This file has no relation with react it only deals with GIT , 
+               It neglect those files which are not supposed to be pushed to the git. Like Node_modules which we do not want to push to git.
+************************************************************************************************************************************
+
+
+//SRC
+In SRC files are present in a systematic manner.
+App.css---> App.js--->App.test.js---> index.html---> index.js
+
+App.css is used for styling.
+
+From App.js--->  file we start writing code.
+
+App.test.js---> we write unit test cases 
+
+index.js ---> It is the entry point of the react 
+
+Always remember whenever we create file in REACT always keep its first letter Capital
+
+reportWebVitals--> This file gives the output of performance 
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+
+setupTests --> Setupt of test cases starts from this file
+************************************************************************************************************************************
+
+//public folder 
+~It consist of HTML kind of details which are not related to REACT
+~
+***********************************************************************************************************************************
+node_modules--> It consist of all the packages
+
+package.json ---> 
+
+package. json holds important information about the project. It contains human-readable metadata about the project (like the project name and description) as well as functional metadata like the package version number and a list of dependencies required by the application.
+
+Note:-> node module files are not pushed to the git , because node modules are heavy on itself because it consist of lot of files and may require lots of time
+
+Now if some other developer pulls our project from git hub , he will not download node modules rather he will run the command npm install and npm install will take the dependencies from package.json and will install it alongwith their internal dependencies.
+
+************************************************************************************************************************************
+
+//Components in REACT.JS
+
+https://beta.reactjs.org/learn/your-first-component
+
+component basic meaning --> A part or element of a large whole specially a large component
+
+In react---> 
+
+It is a piece of code that can be re-used
+
+Example--> function
+
+But more powerful then function. Header , footer is the best example 
+
+Types of component --> functional component, class component , higher order component , pure component , controlled component , uncontrolled component 
+
+
+yes it is possible to create component inside component and we have to call that component inside that component only or else it will not work
+************************************************************************************************************************************
+
+JSX in REACT
+
+https://beta.reactjs.org/learn/writing-markup-with-jsx
+
+please keep in mind that import is a javascript functionality
+************************************************************************************************************************************
+
+Click Event and Function in REACT
+
+https://beta.reactjs.org/learn/responding-to-events#adding-event-handlers
+
+************************************************************************************************************************************
+
+state in functional component
+
+
+https://beta.reactjs.org/learn/state-a-components-memory#recap
+
+
+************************************************************************************************************************************
+
+
+
+
+
+
+
