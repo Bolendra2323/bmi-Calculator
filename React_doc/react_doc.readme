@@ -96,30 +96,84 @@ Types of component --> functional component, class component , higher order comp
 yes it is possible to create component inside component and we have to call that component inside that component only or else it will not work
 ************************************************************************************************************************************
 
+*************
 JSX in REACT
+*************
 
 https://beta.reactjs.org/learn/writing-markup-with-jsx
 
 please keep in mind that import is a javascript functionality
 ************************************************************************************************************************************
 
+*********************************
 Click Event and Function in REACT
+*********************************
 
 https://beta.reactjs.org/learn/responding-to-events#adding-event-handlers
 
 ************************************************************************************************************************************
 
+*****************************
 state in functional component
+******************************
 
 
 https://beta.reactjs.org/learn/state-a-components-memory#recap
 
+state is basically a object where we can store data.
+If we use variable then our component don't get updated
+whereas in order update component we can use state. State is present inside react only
 
 ************************************************************************************************************************************
 
+************************
+state in class component
+*************************
 
+https://beta.reactjs.org/reference/react/PureComponent#skipping-unnecessary-re-renders-for-class-components
 
+Note that we can use state outside of the component and it is not recommended to use outside of the component
 
+We cannot use 'useState' inside class Component
 
+************************************************************************************************************************************
 
+*******************************
+Props with functional component
+*******************************
+
+https://reactjs.org/docs/components-and-props.html
+
+Just like we used to pass parameters inside parenthesis of function. Similarly we use props to pass values inside component
+We use Props to transfer data from one component to another.
+
+Just like we pass parameters inside the parenthesis of a function, similarly we pass props inside component.
+Props can be called as properties
+
+************************************************************************************************************************************
+
+***************************
+Props with class Component
+***************************
+
+Just like we used to pass parameters inside parenthesis of function. Similarly we use props to pass values inside component
+We use Props to transfer data from one component to another.
+
+Just like we pass parameters inside the parenthesis of a function, similarly we pass props inside component.
+Props can be called as properties
+
+Note that--> We cannot change the value of props in the component where we are receiving the props but we can change the
+value of props in the parent component.Here App.js is the parent component and Student.js is the child component.
+
+************************************************************************************************************************************
+
+*******************************
+Conditional Rendering in REACT
+*******************************
+
+https://www.freecodecamp.org/news/conditional-rendering-in-react-using-ternaries-and-logical-and-7807f53b6935/
+
+************************************************************************************************************************************
+
+Basic FORM Validation
 

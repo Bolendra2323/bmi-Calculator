@@ -15,10 +15,12 @@
 // Below is a class Component
 
 // In a class component never forget to write render ,
-import React, { Component } from "react";
+// import React, { Component } from "react";
 
-export default class User extends Component {
-  render() {
-    return <h1> Hello User I am using class component</h1>;
-  }
-}
+// export default class User extends Component {
+//   render() {
+//     return <h1> Hello User I am using class component</h1>;
+//   }
+// }
+
+// ***************************************************************************************************************************
