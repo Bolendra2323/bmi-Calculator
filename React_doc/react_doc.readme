@@ -177,3 +177,45 @@ https://www.freecodecamp.org/news/conditional-rendering-in-react-using-ternaries
 
 Basic FORM Validation
 
+Form validation code is written in Login.js file
+
+************************************************************************************************************************************
+
+Pass function as props
+
+https://www.freecodecamp.org/news/how-to-use-props-in-reactjs/
+
+************************************************************************************************************************************
+
+Life cycle method
+
+https://blog.bitsrc.io/react-16-lifecycle-methods-how-and-when-to-use-them-f4ad31fb2282
+
+Life cycle method in react is executed during the following scenario:
+
+:- When Component is Loaded
+:- When Component is updated with state and props
+:- When Component is removed.
+
+************************************************************************************************************************************
+
+constructor Life Cycle method
+
+https://www.w3schools.com/react/react_lifecycle.asp
+
+Note :- We cannot directly use life cycle method inside functional Component. But in order to use life cycle method
+inside functional Component we have to use hooks.
+
+constructor is a life cycle method and when whenever we write class component this constructor will be included.
+
+Whenever we create class component and inside render method we write some html and constuctor gets ready before the 
+initialisation of the html component
+
+Important:- https://medium.com/devinder/why-api-call-is-recommended-in-componentdidmount-38c8c3c57834#:~:text=Summary%3A,render()%2C%20i.e%20componentDidMount().
+
+
+************************************************************************************************************************************
+
+
+Render Life cycle method
+

@@ -24,3 +24,18 @@
 // }
 
 // ***************************************************************************************************************************
+
+// Here below functional Component is the child component
+
+import React from "react";
+
+function User(props){
+    return(
+        <div>
+            <h1>Hello User I am learning pass function as Props</h1>
+            <button onClick={props.data}>Click Me</button>
+        </div>
+    )
+}
+
+export default User;

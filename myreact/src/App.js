@@ -250,3 +250,72 @@
 
 // Basic Form Validation
 
+// import logo from './logo.svg';
+// import './App.css';
+// import Login from './Login';
+// function App(){
+//     const data=true;
+//     return(
+//         <div className='App'>
+//             <Login/>
+//         </div>
+//     )
+// }
+// export default App;
+
+// ***********************************************************************************************************************
+
+// import React from "react";
+// import './App.css';
+// import User from "./User.js";
+
+// function App(){
+//     function getData(){
+//         alert("Hello Component");
+//     }
+//     return(
+//         <div className="App">
+//             <User data={getData}/>
+//         </div>
+//     )
+// }
+// export default App;
+
+// ***********************************************************************************************************************
+
+
+//  Constructor life cycle method
+
+// import logo from "./logo.svg";
+// import "./App.css";
+// import React from "react";
+// class App extends React.Component {
+//   constructor() {
+//     super();
+//     this.state = {
+//       name: "Bolendra Moran",
+//     };
+
+//     console.warn("constructor");
+//   }
+//   render() {
+//     console.warn("render");
+//     return (
+//       <div>
+//         <h1>Hello World{this.state.name}</h1>
+//       </div>
+//     );
+//   }
+// }
+
+// Here constructor method is called before the render method
+// super() is called to call the parent constructor i.e., component class.
+// Calling API in constructor() or componentWillMount() is not a syntax error but increases code complexity
+// and hampers performance. So, to avoid unnecessary re-rendering and code complexity, it's
+// better to call API after render(), i.e componentDidMount().
+// export default App;
+
+// ***********************************************************************************************************************
+
+//  Render Life cycle method
+
