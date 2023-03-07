@@ -283,7 +283,6 @@
 
 // ***********************************************************************************************************************
 
-
 //  Constructor life cycle method
 
 // import logo from "./logo.svg";
@@ -318,4 +317,522 @@
 // ***********************************************************************************************************************
 
 //  Render Life cycle method
+
+//  Render method is applicable only for class Component and we do not make render method inside functional component
+// import logo from './logo.svg';
+// import './App.css';
+// import React from 'react';
+// import User from './User';
+// function App(){
+//     const [name,setName]=React.useState("Bolendra Moran")
+
+//     return (
+//         <div className='App'>
+//             <h1>Render Method in REACT</h1>
+//             <User/>
+//         </div>
+//     )
+// }
+
+// export default App;.
+
+// ***********************************************************************************************************************
+
+//  ComponentdidMount life cycle method
+
+// import "./App.css";
+// import React from "react";
+// class App extends React.Component {
+//   constructor() {
+//     super();
+//     console.log("Constructor is called");
+//     this.state = { name: "Bolendra Moran" };
+//   }
+
+//   componentDidMount() {
+//     console.log("Component did mount is called");
+//   }
+//   render() {
+//     console.log("Render is called");
+//     return (
+//       <div className="App">
+//         <h1>component Did Mount {this.state.name}</h1>
+//         <button
+//           onClick={() =>
+//             this.setState({
+//               name: "Bolendra Moran the software developer is learning Component did mount in react",
+//             })
+//           }
+//         >
+//           Update
+//         </button>
+//       </div>
+//     );
+//   }
+// }
+
+// export default App;
+
+// ***********************************************************************************************************************
+
+// ComponentDidUpdate
+// Below is a Class Component
+
+// import "./App.css";
+// import React from "react";
+
+// class App extends React.Component {
+//   constructor() {
+//     super();
+//     console.log("constructor");
+//     this.state = {
+//       count: 0,
+//     };
+//   }
+
+//   componentDidUpdate(preProps, preState, snapshot) {
+//     console.log("componentDidUpdate", preState.count, this.state.count);
+//     if (this.state.count < 10) {
+//       this.setState({ count: this.state.count + 1 });
+//     }
+//   }
+
+//   render() {
+//     console.log("render");
+//     return (
+//       <div className="App">
+//         <h1>Component Did Update {this.state.count}</h1>
+//         <button
+//           onClick={() => {
+//             this.setState({ count: 1 });
+//           }}
+//         >
+//           Update
+//         </button>
+//       </div>
+//     );
+//   }
+// }
+
+// export default App;
+
+// ***********************************************************************************************************************
+
+// ShouldComponentUpdate Life cycle method
+
+// import "./App.css";
+// import React from "react";
+// class App extends React.Component {
+//   constructor() {
+//     super();
+//     this.state = {
+//       count: 0,
+//     };
+//   }
+
+//   shouldComponentUpdate() {
+//     console.log("shouldComponentUpdate", this.state.count);
+//     return true;
+//   }
+//   render() {
+//     return (
+//       <div className="App">
+//         <h1>Should Component update {this.state.count}</h1>
+//         <button
+//           onClick={() => {
+//             this.setState({ count: this.state.count + 1 });
+//           }}
+//         >
+//           {" "}
+//           Update Counter
+//         </button>
+//       </div>
+//     );
+//   }
+// }
+
+// export default App;
+
+// ***********************************************************************************************************************
+
+// ComponentWillUnmount Life Cycle Method
+
+// import './App.css';
+// import React from 'react';
+// import Student from './Student';
+
+// class App extends React.Component{
+//     constructor()
+//     {
+//         super();
+//         this.state={
+//             show:true
+//         }
+//     }
+//     render(){
+//         return (
+//             <div className='App'>
+//                 {
+//                     this.state.show?<Student/>
+//                     :<h4>Component is removed</h4>
+//                 }
+//                 <button onClick={()=>this.setState({show:false})}>Toggle Student Component</button>
+//             </div>
+//         )
+//     }
+// }
+
+// export default App;
+
+// ***********************************************************************************************************************
+
+// Hooks In react.js
+
+// import './App.css';
+// import React ,{useState} from "react";
+
+// function App(){
+//     const[data,setData]=useState("Bolendra")
+//     return(
+//         <div className='App'>
+//             <h1> I am learning Hook in React.js</h1>
+//             <h2>{data}</h2>
+//             <button onClick={()=>setData("Bolendra Moran is a Software Developer")}>Update</button>
+
+//         </div>
+//     )
+// }
+
+// export default App;
+
+// ***********************************************************************************************************************
+
+// Use Effect Hook in React.js
+
+// import './App.css';
+// import  React,{useState,useEffect} from 'react'
+// function App(){
+//     const[count,setCount]=useState(0)
+//     useEffect(()=>{
+//         console.log("useEffect is called")
+//     })
+//     return(
+//         <div className='App'>
+//             <h1>I am learning useEffect Hook in react.js {count}</h1>
+//             <button onClick={()=>setCount(count+1)}>Increase Count</button>
+
+//         </div>
+//     )
+// }
+
+// export default App;
+
+// ***********************************************************************************************************************
+
+// useEffect with condition like componentdidmount
+
+// import "./App.css";
+// import React, { useEffect, useState } from "react";
+// function App() {
+//   const [data, setData] = useState(10);
+//   const [count, setCount] = useState(100);
+
+//   useEffect(() => {
+//     console.log("Data is is increased");
+//   }, [data]);
+
+//   useEffect(() => {
+//     console.log("count is increasd");
+//   }, [count]);
+//   return (
+//     <div className="App">
+//       <h1>Data:{data}</h1>
+//       <h1>Count:{count}</h1>
+//       <button onClick={() => setData(data + 1)}>Update Data</button>
+//       <br></br>
+//       <button onClick={() => setCount(count + 1)}>Update Count</button>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// ***********************************************************************************************************************
+
+// using props
+
+// import "./App.css";
+// import React, { useEffect, useState } from "react";
+// import User from "./User";
+// function App() {
+//   const [data, setData] = useState(10);
+//   const [count, setCount] = useState(100);
+//   return (
+//     <div className="App">
+//       <User count={count} data={data} />
+//       <button onClick={() => setCount(count + 1)}>Update Counter</button>
+//       <button onClick={() => setData(data + 1)}>Update Data</button>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// ***********************************************************************************************************************
+
+// import "./App.css";
+// import "./style.css";
+// import style from "./custom.module.css";
+// import React from "react";
+// function App() {
+//   const styleItem = { color: "Blue", backgroundColor: "black" };
+//   return (
+//     <div className="App">
+//       <h1 className="primary">Style Type1 in REACT.JS</h1>
+//       <h1 style={styleItem}>Style type 2 in REACT.JS</h1>
+//       <h1 className={style.success}>Style Type 3 in REACT.JS</h1>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// ***********************************************************************************************************************
+
+// Install Bootstrap and implement bootstrap
+
+// import "./App.css";
+// import React from "react";
+// import { Button } from "react-bootstrap";
+
+// function App() {
+//   return (
+//     <div className="App">
+//       <h1>Installed Bootstrap</h1>
+//       <Button onClick={() => alert("Hello")}>Click Me</Button>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// ***********************************************************************************************************************
+
+// Handle Array with List
+
+// import "./App.css";
+// import React from "react";
+// function App() {
+//   // const students=["Bolenra","Moran","Software","Developer"]
+//   // students.map((item)=>{
+//   //     console.log("Detail of the person",item)
+//   // })
+
+//   const students = [
+//     {
+//       name: "Bolendra Moran",
+//       email: "bolendra@gmail.com",
+//       phone: 123456789,
+//     },
+//     {
+//       name: "Bolendra Moran23",
+//       email: "bolendra234@gmail.com",
+//       phone: 123454561,
+//     },
+//     {
+//       name: "Bolendra Moran2345",
+//       email: "bolendra23456@gmail.com",
+//       phone: 123478965,
+//     },
+//   ];
+//   return (
+//     <div className="App">
+//       <h1> Handling Array with List</h1>
+//       <table border="2">
+//         <tr>
+//             <td>Name</td>
+//             <td>Email-ID</td>
+//             <td>Contact</td>
+//         </tr>
+
+//       {
+//       students.map((item) => (
+//         <tr>
+//             <td>{item.name}</td>
+//             <td>{item.email}</td>
+//             <td>{item.phone}</td>
+//         </tr>
+//       ))
+//       }
+//       </table>
+
+//     </div>
+//   );
+// }
+// export default App;
+// ***********************************************************************************************************************
+
+// import './App.css';
+// import React from 'react';
+// import {Table} from 'react-bootstrap';
+// function App(){
+
+//   const users=[
+//     {name:'Bolendra Moran',email:'bolendra102222234@gmail.com',contact:1236776456},
+//     {name:'Bolendra Moran123',email:'bolendra103344@gmail.com',contact:1267673456},
+//     {name:'Bolendra Moran456',email:'bolendra102324@gmail.com',contact:1265463456},
+//     {name:'Bolendra Moran789',email:'bolendra101234@gmail.com',contact:1234545456},
+//   ]
+
+//   return(
+//     <div className='App'>
+//     <h1>List with Bootstrap Table</h1>
+//     <Table striped variant='dark'>
+//       <tbody>
+//         <tr>
+//           <td>Name</td>
+//           <td>Email</td>
+//           <td>Contact</td>
+//         </tr>
+//         {
+//           users.map((item,i)=>
+//           // item.contact==='123456789'?
+//           <tr key={i}>
+//             <td>{item.name}</td>
+//             <td>{item.email}</td>
+//             <td>{item.contact}</td>
+//           </tr>
+//           //:null
+//           )
+//         }
+//       </tbody>
+//     </Table>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// ***********************************************************************************************************************
+
+// Nested list with nested Array
+
+// import "./App.css";
+// import React from "react";
+// import { Table } from "react-bootstrap";
+// function App() {
+//   const users = [
+//     {
+//       name: "Bolendra1",
+//       email: "bolendra10@gmail.com",
+//       address: [
+//         { hm: "123", city: "Noida", country: "India" },
+//         { hm: "456", city: "Gurgaon", country: "India" },
+//         { hm: "789", city: "Noida", country: "India" },
+//         { hm: "101", city: "Delhi", country: "India" },
+//       ],
+//     },
+//     {
+//       name: "Burcewayne",
+//       email: "bruce@test.com",
+//       address: [
+//         { hm: "101", city: "Noida", country: "India" },
+//         { hm: "10", city: "Gurgaon", country: "India" },
+//         { hm: "23", city: "Noida", country: "India" },
+//         { hm: "45", city: "Delhi", country: "India" },
+//       ],
+//     },
+//     {
+//       name: "Peter",
+//       email: "peter@test.com",
+//       address: [
+//         { hm: "101", city: "Noida", country: "India" },
+//         { hm: "10", city: "Gurgaon", country: "India" },
+//         { hm: "23", city: "Noida", country: "India" },
+//         { hm: "45", city: "Delhi", country: "India" },
+//       ],
+//     },
+//     {
+//       name: "Sam",
+//       email: "sam@test.com",
+//       address: [
+//         { hm: "101", city: "Noida", country: "India" },
+//         { hm: "10", city: "Gurgaon", country: "India" },
+//         { hm: "23", city: "Noida", country: "India" },
+//         { hm: "45", city: "Delhi", country: "India" },
+//       ],
+//     },
+//   ];
+//   return (
+//     <div className="App">
+//       <h1>List with Nested Array</h1>
+//       <Table variant="dark">
+//         <tbody>
+//           <tr>
+//             <td>S.N</td>
+//             <td>Name</td>
+//             <td>Email</td>
+//             <td>Address</td>
+//           </tr>
+//           {users.map((item, i) => 
+//             <tr key={i}>
+//               <td>{i + 1}</td>
+//               <td>{item.name}</td>
+//               <td>{item.email}</td>
+//               <td>
+//                 <Table variant="dark">
+//                   <tbody>
+//                     {
+//                       item.address.map((data)=>
+//                       <tr>
+//                         <td>{data.hm}</td>
+//                         <td>{data.city}</td>
+//                         <td>{data.country}</td>
+//                       </tr>
+//                       )
+//                     }
+//                   </tbody>
+//                 </Table>
+//               </td>
+//             </tr>
+//           )}
+//         </tbody>
+//       </Table>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// ***********************************************************************************************************************
+
+
+// Reuse Component in loop 
+
+// import './App.css';
+// import User from './User';
+// import React from 'react';
+// function App(){
+//   const users=[
+//     {name:'Bolendra Moran',email:'bolendra10@gmail.com',contact:"123456"},
+//     {name:'Bolendra Moran123',email:'bolendra10212@gmail.com',contact:"12332356"},
+//     {name:'Bolendra 23',email:'bolen@gmail.com',contact:"332356"},
+//   ]
+//   return (
+//     <div className='App'>
+//       <h1>Reuse Component with List</h1>
+//       {
+//         users.map((item,i)=>
+//         <User data={item}/>
+//         )
+//       }
+//     </div>
+//   )
+// }
+// export default App;
+// ***********************************************************************************************************************
+
+
+// React Fragment
+
 

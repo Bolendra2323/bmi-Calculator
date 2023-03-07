@@ -219,3 +219,178 @@ Important:- https://medium.com/devinder/why-api-call-is-recommended-in-component
 
 Render Life cycle method
 
+https://www.w3schools.com/react/react_lifecycle.asp
+
+use of render method:- It helps to redirect the HTML page with the help of the render() function. 
+It can be immutable in a certain scenario when you create an element and then you can define it as constant, 
+hence it would not allow changing this
+
+Whenever state and props get updated then in that case render method gets executed automatically
+************************************************************************************************************************************
+
+componentdidmount life cycle method
+
+https://www.freecodecamp.org/news/how-to-understand-a-components-lifecycle-methods-in-reactjs-e1a609840630/
+
+usecase of componentDidMount:-
+1:- Whenever we want to call API we use componentDidMount.
+2:- componentDidMount is called whenever our HTML, DOM gets completely ready.
+3:- Operation such Hide and Show are done inside componentDidMount.
+4:- Any operation which is dependent on completion of HTML is done inside componentDidMount
+
+************************************************************************************************************************************
+
+componentDidUpdate
+
+https://www.freecodecamp.org/news/how-to-understand-a-components-lifecycle-methods-in-reactjs-e1a609840630/
+
+The componentDidUpdate() method allows us to run React code when the component is updated. 
+Any network requests that must be made when the details are passed to the component change are coded here
+
+The componentDidMount() will work only when state and props gets updated
+
+************************************************************************************************************************************
+
+ShouldComponentUpdate Life Cycle method
+
+
+https://www.geeksforgeeks.org/what-does-shouldcomponentupdate-do-and-why-is-it-important/
+
+
+The shouldComponentUpdate is a lifecycle method in React. This method makes the component to re-render only 
+when there is a change in state or props of a component and that change will affect the output.
+
+Every component in React goes through a lifecycle of events. I like to think of them as going through a cycle of birth, growth, and death.
+
+Mounting – Birth of your component
+Update – Growth of your component
+Unmount – Death of your component
+
+1. Regardless of React Components, constructors are always ran first 
+	1. In constructor, you will just initialize the state in constructor
+2. Render runs second, which determines what to show. This is the template 
+   of the HTML and dictates the UI is going to be.
+3. Third one that runs is componentDidMount, React runs the constructor, 
+   runs the render and mounts the initial state and mounts on. Then it 
+   will runs the code in componentDidMount();
+   
+- When setState() is called, the render() method will be called again and 
+  re-renders.
+	- Every subsequent child with a different props will also be re-rendered.
+
+Initialization = setup props & state
+
+// Lifecycle Phase 
+1. mounting // Born
+2. update   // Growth
+3. unmounting //Dead
+
+// lifecycle method
+mounting = constructor->render->componentDidMount
+update = render->componentDidUpdate
+unmounting = componentWillUnmount
+
+Class components have lifecycle methods. These for the most part are what useEffect does for function components. 
+They're for doing things like making API calls, starting and ending transitions/animations, debugging, and other things 
+like that. We don't need to use any here, but let's look at a few of the most common ones
+
+constructor isn't necessarily a React lifecylce method but we use it like one. It's where you do things that need to
+ happen before the first render. Generally it's where you set the initial state.
+componentDidMount is a function that's called after the first rendering is completed. This pretty similar to a useEffect
+ call that only calls the first time. This is typically where you want to do data fetching. It doesn't have to be async; 
+ we just made it async here to make the data fetching easy.
+componentDidUpdate is called after your state is updated. If you're doing something like Typeahead where you're making
+ reactive requests to an API based on user input, this would be an ideal place to do it.
+componentWillUnmount is typically a place for cleanup. Let's say you had to write a component to integrate with jQuery
+ (I've had to write this, multiple times), this is where you'd clean up those references (like unattaching from DOM nodes
+  and deleting them) so you don't leak memory. This method is invoked whenever a component is about to be destroyed.
+This class doesn't cover all the lifecycle methods but you can imagine having different timings for different 
+capabilities of a component can be useful. For example, if you have a set of props that come in and you need to
+ filter those props before you display them, you can use getDerivedStateFromProps. Or if you need to react to your 
+ component being removed from the DOM (like if you're subscribing to an API and you need to dispose of the subscription)
+  you can use componentWillUnmount.
+
+There are lots more you can check out in the React docs here.
+
+shouldComponentUpdate blocks the rendering by itself
+
+************************************************************************************************************************************
+
+componentWillUnmount
+
+https://www.geeksforgeeks.org/reactjs-componentwillunmount-method/
+
+************************************************************************************************************************************
+
+Hooks in reactjs
+
+https://www.freecodecamp.org/news/the-beginners-guide-to-react-hooks/#:~:text=What%20are%20React%20Hooks%3F,with%20the%20word%20%22use%22%20.
+
+
+If we want to use life cycle method inside functional Component then we use hooks
+
+With Hook, we can use class component features in functional component such as state, life-cycle, pure component etc
+
+What are React Hooks? Hooks are built-in React functions introduced in React version 16.8. They allow you to use features
+ of the React library like lifecycle methods, state, and context in functional components without having to worry 
+ about rewriting it to a class. Each React Hook name is prefixed with the word "use"
+
+useState is a hook
+const[data,setData]=useStat("Bolendra")
+here by default value of data is Bolendra
+One of biggest sign to identify hook is that it begins with a letter use
+
+************************************************************************************************************************************
+
+useEffect hook in React.js
+
+https://www.freecodecamp.org/news/react-useeffect-absolute-beginners/
+
+:- whenever any component is created then this useEffect hook will be called
+:- Whenever state is updated then this useEffect hook will be called
+
+
+************************************************************************************************************************************
+
+
+useEffect with specific state and props
+
+https://reactjs.org/docs/hooks-effect.html
+
+************************************************************************************************************************************
+
+Style Type in React.js
+
+https://www.freecodecamp.org/news/style-react-apps-with-css/
+
+************************************************************************************************************************************
+
+Handle Array with list
+
+https://reactjs.org/docs/lists-and-keys.html
+
+why to use map instead of for loop while handling array with list
+
+Reason:- https://blog.hackages.io/why-i-stopped-using-for-loops-and-started-mapping-instead-5f6b579a0525
+Another Reason:- Inside return statement map function supports but for loop doesn't supports
+
+************************************************************************************************************************************
+
+List with Bootstrap table and unique key
+
+https://react-bootstrap.github.io/getting-started/introduction
+
+************************************************************************************************************************************
+
+
+React Fragment
+
+
+
+
+
+
+
+
+
+
