@@ -385,6 +385,55 @@ https://react-bootstrap.github.io/getting-started/introduction
 
 React Fragment
 
+https://reactjs.org/docs/fragments.html
+
+React Fragment:- It is a pattern which is used to handle multiple elements or multiple components
+
+Example of Elements :- <h1> tag,
+Example of components:- Functional Component , Class Component
+
+*************************************************************************************************************************************
+
+Send Data Child to Parent Component
+
+https://reactjs.org/docs/lifting-state-up.html
+
+*************************************************************************************************************************************
+
+Pure component in React.js
+
+https://www.geeksforgeeks.org/reactjs-pure-components/
+
+
+pure component stops the re-rendering(Continuously executing) of the component
+
+*************************************************************************************************************************************
+
+useMemo Hook in React.js
+
+:- useMemo hook enhances the performance of the application
+:- Just like we use pure component in class based component similarly we use  useMemo in functional component
+
+*************************************************************************************************************************************
+
+Ref in react 
+
+https://reactjs.org/docs/refs-and-the-dom.html
+
+According to React.js we shouldn't manipulate DOM but using ref can manipulate DOM . That's  why ref is used only in emergency situation
+Ref can manipulate DOM directly
+
+*************************************************************************************************************************************
+
+//use Ref in react.js
+
+https://www.w3schools.com/react/react_useref.asp
+
+*************************************************************************************************************************************
+
+
+
+
 
 
 

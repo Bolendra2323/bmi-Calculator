@@ -87,15 +87,38 @@
 
 // Reuse Component in Loop
 
-function User(props) {
-  return (
-    <div>
-      <span>{props.data.name} </span>
-      <span>{props.data.email} </span>
-      <span>{props.data.contact} </span>
+// function User(props) {
+//   return (
+//     <div>
+//       <span>{props.data.name} </span>
+//       <span>{props.data.email} </span>
+//       <span>{props.data.contact} </span>
 
-    </div>
-  );
-}
+//     </div>
+//   );
+// }
 
-export default User;
+// export default User;
+
+// ***************************************************************************************************************************
+
+// Send data from child component to parent component
+
+// function User(props)
+// {
+
+//   const name="Bolendra Moran"
+//   return (
+//     <div>
+//       <h1>User Name is:-</h1>
+//       <button onClick={()=>props.getData(name)}>Click Me</button>
+//     </div>
+//   )
+// }
+
+// export default User;
+
+// ***************************************************************************************************************************
+
+
+

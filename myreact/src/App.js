@@ -774,7 +774,7 @@
 //             <td>Email</td>
 //             <td>Address</td>
 //           </tr>
-//           {users.map((item, i) => 
+//           {users.map((item, i) =>
 //             <tr key={i}>
 //               <td>{i + 1}</td>
 //               <td>{item.name}</td>
@@ -806,8 +806,7 @@
 
 // ***********************************************************************************************************************
 
-
-// Reuse Component in loop 
+// Reuse Component in loop
 
 // import './App.css';
 // import User from './User';
@@ -832,7 +831,148 @@
 // export default App;
 // ***********************************************************************************************************************
 
-
 // React Fragment
 
+// import './App.css';
+// import React from 'react';
+// import Cols from './cols';
+// function App(){
+//     return(
+//         <>
+//         <h1>REACT FRAGMENT</h1>
+//         <table>
+//             <tbody>
+//                 <tr>
+//                     <Cols/>
+//                     <Cols/>
+//                     <Cols/>
+//                 </tr>
+//             </tbody>
+//         </table>
+
+//         </>
+//     );
+// }
+
+// export default App;
+// ***********************************************************************************************************************
+
+// Send Data from Child component to Parent Component
+
+// here user.js is the child component and app.js is the parent component
+
+// import React from 'react';
+// import './App.css';
+// import User from './User';
+// function App(){
+//     function getName(name)
+//     {
+//         alert(name)
+//     }
+//     return(
+//         <div className='App'>
+//             <h1>Lifting State UPI</h1>
+//             <User getData={getName}/>
+
+//         </div>
+//     )
+// }
+
+// export default App;
+
+// ***********************************************************************************************************************
+
+// import "./App.css";
+// import React from "react";
+// import Counter from "./Counter";
+// class App extends React.Component {
+//   constructor() {
+//     super();
+//     this.state = {
+//       count: 1,
+//     };
+//   }
+//   render() {
+//     return (
+//       <div className="App">
+//         <Counter count={this.state.count}>
+//           <button
+//             onClick={() => {
+//               this.setState({ count: this.state.count + 1 });
+//             }}
+//           >
+//             Update Count
+//           </button>
+//         </Counter>
+//       </div>
+//     );
+//   }
+// }
+// export default App;
+
+// ***********************************************************************************************************************
+
+// Use Memo Hook in react.js
+// import './App.css';
+// import React,{useState} from 'react'
+// function App(){
+//     const [count,setCount]=useState(1)
+//     const [item,setItem]=useState(20)
+
+//     const newApple=React.useMemo(
+
+//         function appleTime(){
+//             console.log("Hello")
+//             return 100*count
+//         },[item]
+//     )
+
+//     return(
+//         <div className='App'>
+//             <h1>hooks in React {count}</h1>
+//             {newApple}
+//             <button onClick={()=> setCount(count+1)}>Update State</button>
+//             <button onClick={()=>setItem(item+1)}>update Item</button>
+//         </div>
+//     )
+// }
+
+// export default App;
+
+
+// ***********************************************************************************************************************
+
+//  Ref in React.js
+
+// import './App.css';
+// import React,{createRef} from 'react';
+// class App extends React.Component{
+
+//     constructor(){
+
+//         super();
+//         this.inputRef=createRef();
+//     }
+
+//     getVal(){
+//         console.log(this.inputRef.current.value)
+//         this.inputRef.current.style.color="red"
+//         this.inputRef.current.style.backgroundColor="black"
+//     }
+//     render(){
+//         return (
+//             <div className='App'>
+//                 <h1>Ref in react</h1>
+//                 <input type="text" ref={this.inputRef}/>
+//                 <button onClick={()=>this.getVal()}>Check Ref</button>
+//             </div>
+//         )
+//     }
+
+// }
+// export default App;
+
+// ***********************************************************************************************************************
+
+// useRef in React.js
 
