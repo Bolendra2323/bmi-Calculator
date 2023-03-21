@@ -429,10 +429,132 @@ Ref can manipulate DOM directly
 
 https://www.w3schools.com/react/react_useref.asp
 
+use Ref is a kind of hook which can be used only in functional Component
+
+Whenever we want to manipulate DOM we use 'useRef'
+
+One Important point to note is that every hook in React starts with letter 'use'
+
 *************************************************************************************************************************************
 
+// Forward Ref
+
+https://reactjs.org/docs/forwarding-refs.html
+
+*************************************************************************************************************************************
+
+// Controlled component
+
+// https://blog.logrocket.com/controlled-vs-uncontrolled-components-in-react/#:~:text=What%20are%20controlled%20components%20in,server%20to%20perform%20an%20action.
+
+Controlled components in React are those in which form data is handled by the component's state. 
+Forms are used to store information in a document section. The information from this form is typically sent to a server to perform an action
+
+In React whenver we control the input fields via state then it is called as controlled component
+
+*************************************************************************************************************************************
+
+// Uncontrolled Component
+
+https://reactjs.org/docs/uncontrolled-components.html
+
+// controlled
+- In a controlled component, form data is handled by a React component.
+
+// uncontrolled
+- The alternative is uncontrolled components, where form data is handled
+by the DOM itself. To write an uncontrolled component, instead of
+writing an event handler for every state update, you can use a ref 
+to get form values from the DOM.
 
 
+In Uncontrolled component there should always be an input field and these input field shouldn't be controlled by react state
+but instead these input field should be controlled by javascript or by ref 
+
+*************************************************************************************************************************************
+
+// Simple HOC
+
+https://reactjs.org/docs/higher-order-components.html
+
+Higher order component are those component which takes input as a component also gives output as a component
+
+*************************************************************************************************************************************
+
+// React-Router V6 Tutorial
+
+https://reactrouter.com/en/main/start/tutorial
+
+*************************************************************************************************************************************
+
+// React Router v6 404 Page Not Found and Redirect
+
+https://bobbyhadz.com/blog/react-router-not-found-page
+
+*************************************************************************************************************************************
+// React Router v6 tutorial in Hindi #4 dynamic Routing with params
+
+https://medium.com/@s.alexis/using-react-router-useparams-to-fetch-data-dynamically-13288e24ed1#:~:text=React%20Router%20is%20a%20library,access%20params%20in%20an%20URL.
+
+*************************************************************************************************************************************
+
+// React Router v6 tutorial in Hindi #5 Link and Nav Link style
+
+note:- We cannot give className to Link
+*************************************************************************************************************************************
+
+// Active link in navbar
+
+*************************************************************************************************************************************
+
+// Use search Param hooks
+
+// Search Param Hooks:- This hooks belongs to React-Router Hook and not ReactJs Hook
+
+https://www.freecodecamp.org/news/a-complete-beginners-guide-to-react-router-include-router-hooks/
+
+https://reactrouter.com/en/main/hooks/use-search-params
+
+https://www.robinwieruch.de/react-router-search-params/
+
+*************************************************************************************************************************************
+
+React Router v6 Navigation on Click | Navigating programmatically
+
+https://stackabuse.com/programmatically-navigate-using-react-router/
+
+Conditional Routing:- 
+
+https://dev.to/salehmubashar/conditional-routing-with-react-router-v6-229g
+
+https://tealfeed.com/conditional-routing-react-router-v6-ff2lh
+
+*************************************************************************************************************************************
+
+Nested Routing
+
+https://www.robinwieruch.de/react-router-nested-routes/
+
+*************************************************************************************************************************************
+
+useLocation Hooks
+
+https://www.educative.io/answers/how-to-use-the-uselocation-hook-in-react
+
+Whenever we move from one route to another route a unique key is generated of that route
+
+*************************************************************************************************************************************
+
+protected Route
+
+https://www.positronx.io/react-protected-routes-with-react-router-tutorial/
+
+In protected Route every page is redirected to login page. 
+So only after successfull login person can access the other pages.
+
+*************************************************************************************************************************************
+
+React -Routing
 
 
 

@@ -1,7 +1,7 @@
 // Simple functional Component
-//***************************************/
+// ***************************************/
 
-//import logo from './logo.svg';
+// import logo from './logo.svg';
 // import './App.css';
 // import User from './User';
 // function App() {
@@ -22,7 +22,7 @@
 
 // ***********************************************************************************************************************
 // Using STATE in functional Component
-//***************************************/
+// ***************************************/
 
 // import './App.css';
 // import User from './User';
@@ -50,7 +50,7 @@
 // ***********************************************************************************************************************
 
 // State in class component
-//************************* */
+// ************************* */
 
 // import React,{ Component} from 'react';
 // import './App.css';
@@ -81,7 +81,7 @@
 // ***********************************************************************************************************************
 
 // Props in State Component
-//************************* */
+// ************************* */
 
 // import React, { useState } from "react";
 
@@ -108,7 +108,7 @@
 
 // ***********************************************************************************************************************
 // Props in Class Component
-//**************************/
+// **************************/
 
 // import './App.css';
 
@@ -939,7 +939,6 @@
 
 // export default App;
 
-
 // ***********************************************************************************************************************
 
 //  Ref in React.js
@@ -976,3 +975,350 @@
 
 // useRef in React.js
 
+// import './App.css';
+// import React ,{useRef} from 'react'
+
+// function App(){
+
+//     let inputRef=useRef(null);
+//     function controlInput(){
+//         inputRef.current.value="abc"
+//         inputRef.current.style.display="none"
+//         inputRef.current.focus()
+//     }
+
+//     return(
+//         <div className='App'>
+//             <h1>useRef in React</h1>
+//             <input type="text" ref={inputRef}/>
+//             <button onClick={controlInput}>Handle Input</button>
+//         </div>
+//     );
+// }
+
+// export default App;
+// ***********************************************************************************************************************
+
+// ForwardRef
+
+// import './App.css';
+// import React,{useRef} from 'react';
+// import User from './User';
+// function App(){
+
+//     let inputRef=useRef(null)
+//     function updateInput()
+//     {
+
+//         inputRef.current.value="1000";
+//         inputRef.current.style.color="red"
+//         inputRef.current.focus()
+//     }
+//     return (
+//         <div className='App'>
+//             <h1>ForwardRef in React</h1>
+//             <User ref={inputRef}/>
+//             <button onClick={updateInput}>Update Input Box</button>
+//         </div>
+//     );
+// }
+
+// export default App;
+
+// ***********************************************************************************************************************
+
+// Controlled Component in react
+
+// import './App.css';
+// import React,{useState} from 'react';
+// function App(){
+
+//     const [val,setVal]=useState("")
+//     console.log(val)
+//     return (
+//         <div className='App'>
+//             <h1>Controlled Component</h1>
+//             <input type="text" value={val} onChange={(e)=>setVal(e.target.value)}/>
+//             <h1>{val}</h1>
+//         </div>
+
+//     )
+// }
+
+// export default App;
+// ***********************************************************************************************************************
+
+// Uncontrolled Component
+
+// import './App.css';
+// import React,{useRef} from 'react'
+// function App(){
+//     let inputRef=useRef(null);
+//     let inputRef2=useRef(null);
+
+//     function submitForm(e){
+//         e.preventDefault()
+//         console.log("input field 1 value :", inputRef.current.value)
+//         console.log("input field 2 value :", inputRef2.current.value)
+//         let input3=document.getElementById('input3').value
+//         console.log("input field 3 value : ",input3)
+//     }
+//     return(
+//         <div className='App'>
+//             <h1>UnConrolled Component</h1>
+//             <form onSubmit={submitForm}>
+//                 <input ref={inputRef} type="text"/><br></br>
+//                 <input ref={inputRef2} type="text"/><br></br>
+//                 <input id="input3" type="text"/><br></br>
+//                 <button>Submit</button>
+//             </form>
+//         </div>
+//     )
+// }
+// export default App;
+// ***********************************************************************************************************************
+
+// Simple HOC
+
+// import './App.css';
+// import React, { useRef, useState } from 'react'
+// function App() {
+//   return (
+//     <div className="App">
+//       <h1>HOC </h1>
+//       <HOCRed cmp={Counter} />
+//       <HOCGreen cmp={Counter} />
+//       <HOCBlue cmp={Counter} />
+
+//     </div>
+//   );
+// }
+// function HOCRed(props)
+// {
+//   return <h2 style={{backgroundColor:'red',width:100}}>Red<props.cmp /></h2>
+// }
+// function HOCGreen(props)
+// {
+//   return <h2 style={{backgroundColor:'green',width:100}}>Grren<props.cmp /></h2>
+// }
+// function HOCBlue(props)
+// {
+//   return <h2 style={{backgroundColor:'blue',width:100}}>blue <props.cmp /></h2>
+// }
+// function Counter()
+// {
+//   const [count,setCount]=useState(0)
+//   return<div>
+//     <h3>{count}</h3>
+//     <button onClick={()=>setCount(count+1)}>Update</button>
+//   </div>
+// }
+
+// export default App;
+
+// ***********************************************************************************************************************
+// ***************************************React-Router V6 Tutorial********************************************************
+
+// React Router v6 tutorial in Hindi 1# getting started
+
+// https://reactrouter.com/en/main/start/tutorial
+
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+// import "./App.css";
+
+// import Home from "./component/Home";
+// import About from "./component/About";
+// function App() {
+//   return (
+//     <div className="App">
+//       <BrowserRouter>
+//         <Routes>
+//           <Route path="/" element={<Home />} />
+//           <Route path="/about" element={<About />} />
+//         </Routes>
+//       </BrowserRouter>
+//     </div>
+//   );
+// }
+// export default App;
+
+// ***********************************************************************************************************************
+
+//  React Router v6 tutorial in Hindi #2 Links, NaBar, anchor Tag
+
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+// import "./App.css";
+
+// import Home from "./component/Home";
+// import About from "./component/About";
+// import Navbar from "./component/Navbar";
+// function App() {
+//   return (
+//     <div className="App">
+//       <BrowserRouter>
+//       <Navbar/>
+//         <Routes>
+//           <Route path="/" element={<Home />} />
+//           <Route path="/about" element={<About />} />
+//         </Routes>
+//       </BrowserRouter>
+//     </div>
+//   );
+// }
+// export default App;
+
+// Note:- Do not put <Navbar/> above <BrowserRouter> Because whatever work we want to do related to reactRoute
+// that shoul be done inside BrowserRouter and not outside BrowserRouter
+
+// ***********************************************************************************************************************
+
+// React Router v6 404 Page Not Found and Redirect
+
+// import { BrowserRouter, Routes, Route,Navigate } from "react-router-dom";
+
+// import "./App.css";
+
+// import Home from "./component/Home";
+// import About from "./component/About";
+// import Navbar from "./component/Navbar";
+// import Page404 from "./component/Page 404";
+// function App() {
+//   return (
+//     <div className="App">
+//       <BrowserRouter>
+//       <Navbar/>
+//         <Routes>
+//           <Route path="/" element={<Home />} />
+//           <Route path="/about" element={<About />} />
+//           {/* <Route path="/*" element={<h1>404 Page not Found</h1>}/> */}
+//           {/* <Route path="/*" element={<Page404 />} /> */}
+
+//           {/* For redirect to different page use below line of code */}
+
+//           <Route path="/*" element={<Navigate to="/"/>}/>
+//         {/* Above line 1202 means that the moment we click wrong link it will re-direct to Home Page */}
+//         </Routes>
+//       </BrowserRouter>
+//     </div>
+//   );
+// }
+// export default App;
+
+// ***********************************************************************************************************************
+
+// React Router v6 tutorial in Hindi #4 dynamic Routing with params
+
+// import { BrowserRouter, Routes, Route,Navigate } from "react-router-dom";
+
+// import "./App.css";
+
+// import Home from "./component/Home";
+// import About from "./component/About";
+// import Navbar from "./component/Navbar";
+// import Page404 from "./component/Page 404";
+// import User from "./component/User";
+// function App() {
+//   return (
+//     <div className="App">
+//       <BrowserRouter>
+//       <Navbar/>
+//         <Routes>
+//           <Route path="/" element={<Home />} />
+//           <Route path="/about" element={<About />} />
+//           {/* <Route path="/*" element={<h1>404 Page not Found</h1>}/> */}
+//           {/* <Route path="/*" element={<Page404 />} /> */}
+//           {/* For redirect to different page use below line of code */}
+//           <Route path="/*" element={<Navigate to="/"/>}/>
+//         {/* Above line 1235 means that the moment we click wrong link it will re-direct to Home Page */}
+//         <Route path="/user/:name" element={<User/>}/>
+//         {/*In line no.1237 we have implemented the params by using ":name" */}
+//         </Routes>
+//       </BrowserRouter>
+//     </div>
+//   );
+// }
+// export default App;
+
+// ***********************************************************************************************************************
+
+// // React Router v6 Link and Nav Link style
+// import { BrowserRouter, Routes, Route,Navigate } from "react-router-dom";
+
+// import "./App.css";
+// import Home from "./component/Home";
+// import About from "./component/About";
+// import Navbar from "./component/Navbar";
+// import Page404 from "./component/Page 404";
+// import User from "./component/User";
+// function App() {
+//   return (
+//     <div className="App">
+//       <BrowserRouter>
+//       <Navbar/>
+//         <Routes>
+//           <Route path="/" element={<Home />} />
+//           <Route path="/about" element={<About />} />
+//           {/* <Route path="/*" element={<h1>404 Page not Found</h1>}/> */}
+//           {/* <Route path="/*" element={<Page404 />} /> */}
+//           {/* For redirect to different page use below line of code */}
+//           <Route path="/*" element={<Navigate to="/"/>}/>
+//         {/* Above line 1235 means that the moment we click wrong link it will re-direct to Home Page */}
+//         <Route path="/user/:name" element={<User/>}/>
+//         {/*In line no.1237 we have implemented the params by using ":name" */}
+//         </Routes>
+//       </BrowserRouter>
+//     </div>
+//   );
+// }
+// export default App;
+
+// ***********************************************************************************************************************
+
+// Active link in navbar
+
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+
+import "./App.css";
+import Home from "./component/Home";
+import About from "./component/About";
+import Navbar from "./component/Navbar";
+// import Page404 from "./component/Page 404";
+import User from "./component/User";
+import Filter from "./component/Filter";
+import Contact from "./component/Contact";
+import Channel from "./component/Channel";
+import Login from "./component/Login";
+import Protected from "./component/Protected";
+
+function App() {
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Protected Component ={Home} />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/login" element={<Login />}/>
+          {/* <Route path="/*" element={<h1>404 Page not Found</h1>}/> */}
+          {/* <Route path="/*" element={<Page404 />} /> */}
+          {/* For redirect to different page use below line of code */}
+          <Route path="/*" element={<Navigate to="/" />} />
+          {/* Above line 1304 means that the moment we click wrong link it will re-direct to Home Page */}
+          <Route path="/user/:name" element={<User />} />
+          {/*In line no.1306 we have implemented the params by using ":name" */}
+          <Route path="/filter" element={<Protected Component ={Filter} />} />
+          <Route path="/contact" element={<Protected Component ={Contact} />}/>
+    
+          <Route path="/channel" element={<Channel />}>
+          {/* <Route path="/contact" element={<Contact/>} /> */}
+
+          </Route>
+
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
+}
+export default App;
