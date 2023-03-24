@@ -1278,47 +1278,182 @@
 
 // Active link in navbar
 
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+// import { Routes, Route, Navigate } from "react-router-dom";
 
-import "./App.css";
-import Home from "./component/Home";
-import About from "./component/About";
-import Navbar from "./component/Navbar";
-// import Page404 from "./component/Page 404";
-import User from "./component/User";
-import Filter from "./component/Filter";
-import Contact from "./component/Contact";
-import Channel from "./component/Channel";
-import Login from "./component/Login";
-import Protected from "./component/Protected";
+// import "./App.css";
+// import Home from "./component/Home";
+// import About from "./component/About";
+// import Navbar from "./component/Navbar";
+// // import Page404 from "./component/Page 404";
+// import User from "./component/User";
+// import Filter from "./component/Filter";
+// import Contact from "./component/Contact";
+// import Channel from "./component/Channel";
+// import Login from "./component/Login";
+// import Protected from "./component/Protected";
+// function App() {
+//   return (
+//     <div className="App">
+//       {/* <BrowserRouter> */}
+//         <Navbar />
+//         <Routes>
+//           <Route path="/" element={<Protected Component ={Home} />} />
+//           <Route path="/about" element={<About />} />
+//           <Route path="/login" element={<Login />}/>
+//           {/* <Route path="/*" element={<h1>404 Page not Found</h1>}/> */}
+//           {/* <Route path="/*" element={<Page404 />} /> */}
+//           {/* For redirect to different page use below line of code */}
+//           <Route path="/*" element={<Navigate to="/" />} />
+//           {/* Above line 1304 means that the moment we click wrong link it will re-direct to Home Page */}
+//           <Route path="/user/:name" element={<User />} />
+//           {/*In line no.1306 we have implemented the params by using ":name" */}
+//           <Route path="/filter" element={<Protected Component ={Filter} />} />
+//           <Route path="/contact" element={<Protected Component ={Contact} />}/>
 
-function App() {
-  return (
-    <div className="App">
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Protected Component ={Home} />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/login" element={<Login />}/>
-          {/* <Route path="/*" element={<h1>404 Page not Found</h1>}/> */}
-          {/* <Route path="/*" element={<Page404 />} /> */}
-          {/* For redirect to different page use below line of code */}
-          <Route path="/*" element={<Navigate to="/" />} />
-          {/* Above line 1304 means that the moment we click wrong link it will re-direct to Home Page */}
-          <Route path="/user/:name" element={<User />} />
-          {/*In line no.1306 we have implemented the params by using ":name" */}
-          <Route path="/filter" element={<Protected Component ={Filter} />} />
-          <Route path="/contact" element={<Protected Component ={Contact} />}/>
-    
-          <Route path="/channel" element={<Channel />}>
-          {/* <Route path="/contact" element={<Contact/>} /> */}
+//           <Route path="/channel" element={<Channel />}>
+//           {/* <Route path="/contact" element={<Contact/>} /> */}
 
-          </Route>
+//           </Route>
 
-        </Routes>
-      </BrowserRouter>
-    </div>
-  );
-}
-export default App;
+//         </Routes>
+//       {/* </BrowserRouter> */}
+//     </div>
+//   );
+// }
+// export default App;
+
+// ***********************************************************************************************************************
+
+// import "./App.css";
+// import React from "react";
+// import { BrowserRouter as Router,Link,Route,Routes } from "react-router-dom";
+
+// function App() {
+//   return (
+//     <div className="App">
+//       <Router>
+//         <Link to="/">Home</Link> <br />
+//         <Link to="/about">About</Link> <br />
+//         <Routes>
+//         <Route path="/" exact={true}><Home /></Route>
+//         <Route path="/about"><About /></Route>
+//         <Route path ="*"><PageNotFound/></Route>
+//         </Routes>
+//       </Router>
+//     </div>
+//   );
+// }
+
+// function Home() {
+//   return (
+//     <div>
+//       <h1>Home Page</h1>
+//       <p>This is Home Page</p>
+//     </div>
+//   );
+// }
+
+// function About(){
+//   return (
+//     <div>
+//       <h1>About Page</h1>
+//       <p>This is About Page</p>
+//     </div>
+//   )
+// }
+
+// function PageNotFound(){
+//   return (
+//     <div>
+//       <h1>404-Page Not Found</h1>
+//       <p>This page is not present</p>
+//     </div>
+//   )
+// }
+// export default App;
+
+// ***********************************************************************************************************************
+
+
+// Dynamic Routing
+
+// import './App.css';
+// import React from 'react';
+// import {BrowserRouter as Router,Link,Route} from 'react-router-dom';
+// import User from './User';
+// function App(){
+//   let user=[
+//     {name:'Bolendra',id:1},
+//     {name:'Moran',id:2},
+//     {name:'Bruce',id:3},
+//     {name:'wayne',id:4},
+//   ]
+//   return (
+//     <div className='App'>
+     
+//      <Router>
+//       <h1>React Dynamic Routing</h1>
+//       {
+//         user.map((item)=>
+//       <div><Link to={"/user/"+item.id+"/"+item.name}>{item.name}</Link></div>)
+//       }
+//       <Route path="/user/:id/:name" ><User /></Route>
+//       </Router>
+      
+//     </div>
+//   )
+// }
+
+// export default App;
+
+// ***********************************************************************************************************************
+
+// REST API GET METHOD
+
+// import './App.css';
+// import React,{useEffect,useState} from 'react'
+// function App(){
+//     const [users,setUser]=useState([])
+//     useEffect(()=>{
+//         fetch("http://localhose:4000/todo").then((result)=>{
+//             result.json().then((resp)=>{
+//                 console.log(resp)
+//                 setUser(resp)
+//             })
+//         })
+//     },[])
+//     console.log(users)
+//     return(
+//         <div className='App'>
+//             <h1>Get API Call</h1>
+//             <table border="1">
+//                 <tbody>
+//                     <tr>
+//                         <td>ID</td>
+//                         <td>Name</td>
+//                         <td>Email</td>
+//                         <td>Mobile</td>
+//                     </tr>
+//                     {
+//                         users.map((item,i)=>
+//                         <tr key={i}>
+//                             <td>{item.userId}</td>
+//                             <td>{item.name}</td>
+//                             <td>{item.email}</td>
+//                             <td>{item.modile}</td>
+//                         </tr>
+//                         )
+//                     }
+//                 </tbody>
+//             </table>
+//         </div>
+//     )
+// }
+
+// export default App;
+
+
+// ***********************************************************************************************************************
+
+// POST METHOD WITH API
+

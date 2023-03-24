@@ -556,6 +556,49 @@ So only after successfull login person can access the other pages.
 
 React -Routing
 
+https://www.geeksforgeeks.org/reactjs-router/
+
+https://github.com/Ephem/react-router-wrapper
+
+We should not use <Router> More then one in our app. That is why we have used BrowserRouter only in index.js 
+and once the wrapper "<Router>" is wrapped inside <App/> then we don't have to use <BrowserRouter> inside App.js file
+
+************************************************************************************************************************************
+
+404page  - Page not found
+
+https://www.makeuseof.com/react-router-404-page-create/
+
+************************************************************************************************************************************
+
+React -Dynamic Routing
+
+dynamic routing is the time at which the routing takes place. In dynamic routing, routes are initialized dynamically 
+when the page gets rendered. This means almost everything is a component in the React Router.
+
+https://blog.webdevsimplified.com/2022-07/react-router/
+
+************************************************************************************************************************************
+
+REACT-fetch API | GET method
+
+https://codedamn.com/news/reactjs/reactjs-fetch-api-example
+
+
+API:- Application programming interface
+
+In API data is stored in the json format.
+
+************************************************************************************************************************************
+
+
+
+
+
+
+
+
+
 
 
 
