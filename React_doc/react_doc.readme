@@ -591,18 +591,56 @@ In API data is stored in the json format.
 
 ************************************************************************************************************************************
 
+The Access-Control-Allow-Origin Header Explained – With a CORS Example
+
+https://www.freecodecamp.org/news/access-control-allow-origin-header-explained/
+
+************************************************************************************************************************************
+
+Previous state in REACT Functional Component
+
+https://www.geeksforgeeks.org/how-to-get-previous-state-in-reactjs-functional-component/
+
+************************************************************************************************************************************
+
+Previous Props with Hooks
+
+https://blog.logrocket.com/accessing-previous-props-state-react-hooks/
+
+************************************************************************************************************************************
+
+
+State with object
+
+https://dev.to/joelynn/react-hooks-working-with-state-objects-46eb#:~:text=To%20use%20the%20useState%20hook,to%20import%20it%20from%20React.&text=import%20React%2C%20%7BuseState%7D%20from,lets%20you%20update%20the%20state.
+
+************************************************************************************************************************************
+
+Context API with example
+
+https://www.loginradius.com/blog/engineering/react-context-api/#:~:text=The%20React%20Context%20API%20is,to%20state%20management%20using%20Redux.
+
+************************************************************************************************************************************
+
+//            REACT-REDUX          REACT-REDUX           REACT-REDUX        REACT-REDUX    Date:- 03-April-2023
 
 
 
+REACT-REDUX
 
+https://www.freecodecamp.org/news/how-to-use-redux-in-reactjs-with-real-life-examples-687ab4441b85/
 
+https://react-redux.js.org/tutorials/quick-start
 
+https://www.javatpoint.com/react-redux
 
+************************************************************************************************************************************
 
+REDUX-ARCHITECTURE
 
+https://ordinarycoders.com/blog/article/redux-architecture-react
 
-
-
+************************************************************************************************************************************
 
 
 

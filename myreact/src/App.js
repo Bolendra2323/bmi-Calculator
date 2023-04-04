@@ -1374,7 +1374,6 @@
 
 // ***********************************************************************************************************************
 
-
 // Dynamic Routing
 
 // import './App.css';
@@ -1390,7 +1389,7 @@
 //   ]
 //   return (
 //     <div className='App'>
-     
+
 //      <Router>
 //       <h1>React Dynamic Routing</h1>
 //       {
@@ -1399,7 +1398,7 @@
 //       }
 //       <Route path="/user/:id/:name" ><User /></Route>
 //       </Router>
-      
+
 //     </div>
 //   )
 // }
@@ -1452,7 +1451,6 @@
 
 // export default App;
 
-
 // ***********************************************************************************************************************
 
 // POST METHOD WITH API
@@ -1481,7 +1479,7 @@
 //     }
 //     return (
 //         <div className="App">
-//           <h1>POST API Example </h1>  
+//           <h1>POST API Example </h1>
 //           <input type="text" name="name" value={name} onChange={(e)=>{setName(e.target.value)}}  /> <br /> <br />
 //           <input type="text" name="email"  value={email} onChange={(e)=>{setEmail(e.target.value)}} /> <br /> <br />
 //           <input type="text" name="mobile"  value={mobile} onChange={(e)=>{setMobile(e.target.value)}}/> <br /> <br />
@@ -1495,3 +1493,278 @@
 
 // DELETE METHOD WITH API
 
+// import "./App.css";
+// import React, { useEffect, useState } from "react";
+// function App() {
+//   const [users, setUser] = useState([]);
+//   useEffect(() => {
+//     getList();
+//   }, []);
+//   console.log(users);
+//   function getList() {
+//     fetch("http://localhost:4000/todo").then((result) => {
+//       result.json().then((resp) => {
+//         console.log(resp);
+//         setUser(resp);
+//       });
+//     });
+//   }
+//   function deleteUser(id) {
+//     fetch(`http://localhost:4000/todo/${id}`, {
+//       method: "DELETE",
+//     }).then((result) => {
+//       result.json().then((resp) => {
+//         console.log(resp);
+//         getList();
+//       });
+//     });
+//   }
+//   return (
+//     <div className="App">
+//       <h1>DELETE API METHOD</h1>
+//       <table border="1">
+//         <tbody>
+//           <tr>
+//             <td>ID</td>
+//             <td>Name</td>
+//             <td>Email</td>
+//             <td>Mobile</td>
+//           </tr>
+//           {users.map((item, i) => (
+//             <tr key={i}>
+//               <td>{item.id}</td>
+//               <td>{item.name}</td>
+//               <td>{item.email}</td>
+//               <td>{item.mobile}</td>
+//               <td>
+//                 <button onClick={() => deleteUser(item.id)}>Delete</button>
+//               </td>
+//             </tr>
+//           ))}
+//         </tbody>
+//       </table>
+//     </div>
+//   );
+// }
+
+// export default App;
+// ***********************************************************************************************************************
+
+// Pre-Filled Form DATA
+
+// import "./App.css";
+// import React, { useEffect, useState } from "react";
+// function App() {
+//   const [users, setUser] = useState([]);
+//   const [name, setName] = useState("");
+//   const [email, setEmail] = useState("");
+//   const [mobile, setMobile] = useState("");
+//   const [userId, setUserId] = useState(null);
+
+//   useEffect(() => {
+//     getUsers();
+//   }, []);
+
+//   function getUsers() {
+//     fetch("http://localhost:4000/todo").then((result) => {
+//       result.json().then((resp) => {
+//         setUser(resp);
+//         setName(resp[0].mobile);
+//         setEmail(resp[0].email);
+//         setUserId(resp[0].id);
+//       });
+//     });
+//   }
+
+//   function deleteUser(id) {
+//     fetch(`http://localhost:4000/todo/${id}`, {
+//       method: "DELETE",
+//     }).then((result) => {
+//       result.json().then((resp) => {
+//         console.log(resp);
+//         getUsers();
+//       });
+//     });
+//   }
+
+//   function selectUser(id) {
+//     let item = users[id - 1];
+//     setName(item.name);
+//     setEmail(item.email);
+//     setMobile(item.mobile);
+//     setUserId(item.id);
+//   }
+//   function updateUser() {
+//     let item = { name, mobile, email };
+//     console.log("item", item);
+//     fetch(`http://localhost:4000/todo/${userId}`, {
+//       method: "PUT",
+//       headrers: {
+//         Accept: "application/json",
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify(item),
+//     }).then((result) => {
+//       result.json().then((resp) => {
+//         console.log(resp);
+//         getUsers();
+//       });
+//     });
+//   }
+//   return (
+//     <div className="App">
+//       <h1>Update User Data With API </h1>
+//       <table border="1" style={{ float: "left" }}>
+//         <tbody>
+//           <tr>
+//             <td>ID</td>
+//             <td>Name</td>
+//             <td>Email</td>
+//             <td>Mobile</td>
+//             <td>Operations</td>
+//           </tr>
+//           {users.map((item, i) => (
+//             <tr key={i}>
+//               <td>{item.id}</td>
+//               <td>{item.name}</td>
+//               <td>{item.email}</td>
+//               <td>{item.mobile}</td>
+//               <td>
+//                 <button onClick={() => deleteUser(item.id)}>Delete</button>
+//               </td>
+//               <td>
+//                 <button onClick={() => selectUser(item.id)}>Update</button>
+//               </td>
+//             </tr>
+//           ))}
+//         </tbody>
+//       </table>
+//       <div>
+//         <input
+//           type="text"
+//           value={name}
+//           onChange={(e) => {
+//             setName(e.target.value);
+//           }}
+//         />{" "}
+//         <br />
+//         <br />
+//         <input
+//           type="text"
+//           value={email}
+//           onChange={(e) => {
+//             setEmail(e.target.value);
+//           }}
+//         />{" "}
+//         <br />
+//         <br />
+//         <input
+//           type="text"
+//           value={mobile}
+//           onChange={(e) => {
+//             setMobile(e.target.value);
+//           }}
+//         />{" "}
+//         <br />
+//         <br />
+//         <button onClick={updateUser}>Update User</button>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// ***********************************************************************************************************************
+
+// Previous state in functional component
+
+// import './App.css';
+// import React ,{useState}from 'react'
+// function App(){
+//   const [count,setCount]=useState(0)
+//   function updateCounter()
+//   {
+//     // let item=Math.floor(Math.random()*10)
+//     // setCount((pre)=>{
+//     //   if(pre<3)
+//     //   {
+//     //     alert("last value is very low")
+//     //   }
+//     //   return item
+//     // })
+//     for(let i=0;i<5;i++)
+//     {
+//       setCount((pre)=>pre+1)
+//     }
+//   }
+
+//   return (
+//     <div className='App'>
+//       <h1>{count}</h1>
+//       <button onClick={updateCounter}>Click me to Update Counter</button>
+
+//     </div>
+//   )
+
+// }
+// export default App;
+
+
+// ***********************************************************************************************************************
+
+//Previous Props with Hooks
+
+//  Whenever there comes a hook keep in mind that we will be talking about funtional Component
+
+
+// import './App.css';
+// import React from 'react'
+// import User from './User';
+// function App(){
+//     const [count,setCount]=React.useState(0)
+//     return (
+//         <div className='App'>
+//             <h1>Previous Props</h1>
+//             <User count={count} />
+//             {/* <button onClick={()=>setCount(count+1)}>Update Counter</button> */}
+//             <button onClick={()=>setCount(Math.floor(Math.random()*10))}>Update Counter</button>
+//         </div>
+//     );
+// }
+// export default App;
+
+// ***********************************************************************************************************************
+
+// State Object with HOOKS
+
+// import './App.css';
+// import React from 'react';
+// function App(){
+// // const [data,setData]=React.useState({name:'Tony Stark',age:125698})
+// const [data,setData]=React.useState({name:'',age:''})
+//     return (
+//         <div className='App'>
+//             <h1>State Object with Hooks</h1>
+//             <input type="text" placeholder="Enter Name" value={data.name}
+//              onChange={(e)=>{setData({...data,name:e.target.value})}}/>
+//             <input type="text" placeholder="Enter Age" value={data.age} 
+//             onChange={(e)=>{setData({...data,age:e.target.value})}}/>
+//             <h1>{data.name}</h1>
+//             <h1>{data.age}</h1>
+//         </div>
+//     )
+// }
+
+// export default App;
+
+
+// ***********************************************************************************************************************
+
+
+//            REACT-REDUX          REACT-REDUX           REACT-REDUX        REACT-REDUX 
+
+//  What is Redux
+//  A container where we can store our whole application data
+//  So we call it to state management
+//  It doesn't belong to the component state

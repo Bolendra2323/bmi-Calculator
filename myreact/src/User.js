@@ -153,3 +153,28 @@
 
 // ***************************************************************************************************************************
 
+// Using the below code for Previous Props with Hooks
+
+// Use Effect takes one call back function
+
+
+// import React, { useRef,useEffect } from 'react';
+// function User(props)
+// {
+//     const lastVal=useRef();
+//     useEffect(()=>{
+//         lastVal.current=props.count
+//     })
+//     const previousProps=lastVal.current
+//     return (
+//         <div>
+//             <h1>Current Value:-{props.count}</h1>
+//             <h2>Previous Value:-{previousProps}</h2>
+//             <h3>Difference between the two:-{props.count-previousProps}</h3>
+//         </div>
+//     )
+// }
+// export default User;
+
+// ***************************************************************************************************************************
+
